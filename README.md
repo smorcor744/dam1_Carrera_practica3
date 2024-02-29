@@ -52,12 +52,15 @@ Analiza y modifica el código de este repositorio para realizar los siguientes p
    ```
    *** CLASIFICACIÓN PARCIAL (ronda 3) ***
    
-   1. Flash Automovil(km = 12.56, combustible = 34.76 L)
+   1. Flash Automovil(km = 122.56, combustible = 34.76 L)
+   2. Palo Cortao Motocicleta(km = 99,43, combustible = 12,32 L)
    
    ...
    
    ```
+
+   - Modificar el método obtenerInformacion() para retornar la info a mostrar en la claseificación parcial de cada participante.
    
-   - Modificar la lógica de la carrera para que todos lleguen a la meta, pero se muestre la clasificación según hayan llegado a la misma. Mostrar también el número de iteraciones que han tardado cada uno en llegar.
+   - Modificar la lógica de la carrera para que todos lleguen a la meta, pero se muestre la clasificación según hayan llegado a la misma. Mostrar también el número de rondas que han tardado cada uno en llegar.
    
-   - Modificar la lógica interna para que el número de filigranas que realiza un vehículo sea de 0 a 3, pero también retrase al vehículo unos kms de forma aletaoria entre 10 y 50 kms en cada filigrana... registrando ese retraso de kms en la acción.
+   - Modificar la lógica interna para que el número de filigranas que realiza un vehículo sea de 0 a 3, pero también retrase al vehículo unos kms de forma aletaoria entre 10 y 50 kms en cada filigrana... registrando ese retraso de kms en la acción que registra la filigrana.
