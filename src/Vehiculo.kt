@@ -12,7 +12,7 @@
  * @constructor Crea una instancia de un vehículo con los parámetros especificados y valida las condiciones iniciales.
  */
 open class Vehiculo(
-    nombre: String,
+    val nombre: String,
     protected val marca: String,
     protected val modelo: String,
     capacidadCombustible: Float,
@@ -20,7 +20,6 @@ open class Vehiculo(
     var kilometrosActuales: Float
 ) {
 
-    val nombre: String = nombre.capitalizar()
     protected val capacidadCombustible = capacidadCombustible.redondear(2)
     var combustibleActual = combustibleActual.redondear(2)
         set(value) {
@@ -32,20 +31,10 @@ open class Vehiculo(
     init {
         require(capacidadCombustible > 0) { "La capacidad del tanque debe ser un valor positivo." }
         require(combustibleActual >= 0) { "El combustible actual no puede ser negativo." }
-        require(!nombreEstaRepetido(this.nombre)) { "Ya existe el nombre ${this.nombre}" }
     }
 
     companion object {
         const val KM_POR_LITRO = 10.0f // 10 KM por litro.
-        private val nombres: MutableSet<String> = mutableSetOf()
-
-        /**
-         * Comprueba si ya existe un vehículo con ese mismo nombre.
-         *
-         * @param nombre Nombre del nuevo vehiculo a ingresar en la lista de todos los vehículos.
-         * @return true si el nombre ya existe y false si es un nuevo nombre, como [Boolean].
-         */
-        private fun nombreEstaRepetido(nombre: String) = !nombres.add(nombre)
     }
 
     /**

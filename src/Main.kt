@@ -14,21 +14,6 @@ fun Float.redondear(posiciones: Int): Float {
 }
 
 /**
- * Extiende la clase String para capitalizar las palabras de cualquier cadena de caracteres.
- * También elimina la secuencia de espacios al principio y final de la misma y delimita las palabras de la cadena por un
- * solo espacio.
- *
- * return Un [String] transformado con sus palabras capitalizadas y un solo espacio entre ellas.
- */
-fun String.capitalizar(): String {
-    // Elimina los espacios al principio y final de la cadena y reemplaza cualquier secuencia de espacios por uno solo.
-    // Las palabras resultantes se asignan a una lista.
-    val listaPalabras = this.trim().replace("\\s+".toRegex(), " ").split(" ")
-    // Retorna la misma cadena de caracteres con las palabras capitalizadas y separadas por un solo espacio.
-    return listaPalabras.joinToString(" ") { palabra -> palabra.lowercase().replaceFirstChar { it.uppercase() } }
-}
-
-/**
  * Punto de entrada del programa. Crea una lista de vehículos y una carrera, e inicia la carrera mostrando
  * los resultados al finalizar.
  */
