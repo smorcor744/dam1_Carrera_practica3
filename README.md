@@ -5,7 +5,7 @@ Analiza y modifica el código de este repositorio para realizar los siguientes p
 
 ### PARTE 1
 
-#### 1. Crear 2 nuevas clases derivadas: Camion es una clase específica de Automovil y Quad es una clase específica de Motocicleta.
+#### 1. Crear 2 nuevas clases derivadas: Camion es una clase derivada de Automovil y Quad es una clase derivada de Motocicleta.
 
    - El camión tiene un consumo de 16L/100Km. Además tendrá un peso expresado en Kg (min 1000 máx 10000) que afectará en su autonomía... ya que cada 1000 Kg de peso afecta negativamente en la autonomía, reduciendo los KM por litro en 0.2.
    
