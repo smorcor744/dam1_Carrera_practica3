@@ -60,6 +60,10 @@ Analiza y modifica el código de este repositorio para realizar los siguientes p
    ```
 
    - Modificar el método obtenerInformacion() para retornar la info a mostrar en la claseificación parcial de cada participante.
+
+   - Eliminar la propiedad posiciones de la clase Carrera y modificar el código para que funcione todo igual ya que la información la tenemos también en la lista de participantes.
+
+   - Cread un atributo de clase para contabilizar las paradas por repostaje que realiza cada vehículo en vez de calcularlo con el método "count" en obtenerResultados(). Comentad o eliminad el código que sobra al realizar este cambio.
    
    - Modificar la lógica de la carrera para que todos lleguen a la meta, pero se muestre la clasificación según hayan llegado a la misma. Mostrar también el número de rondas que han tardado cada uno en llegar.
    
