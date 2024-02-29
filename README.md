@@ -59,3 +59,5 @@ Analiza y modifica el código de este repositorio para realizar los siguientes p
    ```
    
    - Modificar la lógica de la carrera para que todos lleguen a la meta, pero se muestre la clasificación según hayan llegado a la misma. Mostrar también el número de iteraciones que han tardado cada uno en llegar.
+   
+   - Modificar la lógica interna para que el número de filigranas que realiza un vehículo sea de 0 a 3, pero también retrase al vehículo unos kms de forma aletaoria entre 10 y 50 kms en cada filigrana... registrando ese retraso de kms en la acción.
