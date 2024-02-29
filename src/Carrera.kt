@@ -11,16 +11,15 @@ import kotlin.math.ceil
 class Carrera(
     val nombreCarrera: String,
     private val distanciaTotal: Float,
-    participantes: List<Vehiculo> = listOf()
+    private val participantes: List<Vehiculo> = listOf()
 ) {
-    private val participantes: MutableList<Vehiculo> = mutableListOf()
     private val historialAcciones = mutableMapOf<String, MutableList<String>>()
     private var estadoCarrera = false // Indica si la carrera está en curso o ha finalizado.
     private val posiciones = mutableMapOf<String, Float>()
 
     init {
         require(distanciaTotal >= 1000) { "La distancia total de la carrera debe ser al menos 1000 km." }
-        participantes.forEach { vehiculo -> agregarParticipante(vehiculo) }
+        participantes.forEach { vehiculo -> inicializaDatosParticipante(vehiculo) }
     }
 
     companion object {
@@ -56,17 +55,6 @@ class Carrera(
      */
     override fun toString(): String {
         return "NombreCarrera: $nombreCarrera, DistanciaTotal: $distanciaTotal, Participantes: $participantes, EstadoCarrera: $estadoCarrera, HistorialAcciones: $historialAcciones, Posiciones: $posiciones." }
-
-    /**
-     * Agrega un vehículo a la lista de participantes de la carrera. Inicializa los datos del participante,
-     * preparándolo para la competencia.
-     *
-     * @param vehiculo El vehículo que se agregará a la lista de participantes.
-     */
-    private fun agregarParticipante(vehiculo: Vehiculo) {
-        participantes.add(vehiculo)
-        inicializaDatosParticipante(vehiculo)
-    }
 
     /**
      * Inicializa los datos de un participante en la carrera, preparando su historial de acciones y estableciendo
