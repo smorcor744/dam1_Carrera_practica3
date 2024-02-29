@@ -47,7 +47,7 @@ Analiza y modifica el código de este repositorio para realizar los siguientes p
 
    Una vez terminada la parte 1, debe comenzar la carrera y se debe mostrar la información de la siguiente manera:
    
-   - Cada vez que se realicen un número de iteraciones concreto mostrar una clasificación parcial con el nombre, tipo de vehiculo (Automovil, Motocicletqa, Camion o Quad), kms recorridos y combustible de cada coche. Como título podéis mostrar Clasificación Parcial (número de iteraciones)
+   - Cada vez que se realicen un número de iteraciones o rondas concretas mostrar una clasificación parcial con el nombre, tipo de vehiculo (Automovil, Motocicletqa, Camion o Quad), kms recorridos y combustible de cada coche. Como título podéis mostrar Clasificación Parcial (número de rondas). Entendiendo por ronda cada vez que avanca un vehículo de forma aleatoria.
    
    ```
    *** CLASIFICACIÓN PARCIAL (ronda 3) ***
