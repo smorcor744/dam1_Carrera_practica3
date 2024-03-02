@@ -13,14 +13,14 @@
  */
 open class Vehiculo(
     val nombre: String,
-    protected val marca: String,
-    protected val modelo: String,
+    open var marca: String,
+    open var modelo: String,
     capacidadCombustible: Float,
     combustibleActual: Float,
     var kilometrosActuales: Float
 ) {
 
-    protected val capacidadCombustible = capacidadCombustible.redondear(2)
+    var capacidadCombustible = capacidadCombustible.redondear(2)
     var combustibleActual = combustibleActual.redondear(2)
         set(value) {
             // Si por pequeños errores de redondeo el valor es negativo, establecemos el valor 0,
