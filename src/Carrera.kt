@@ -11,7 +11,9 @@ import kotlin.math.ceil
 class Carrera(
     val nombreCarrera: String,
     private val distanciaTotal: Float,
-    private val participantes: List<Vehiculo> = listOf()
+    private val participantes: List<Vehiculo> = listOf(),
+    private var contRondas: Int = 0,
+    private var rondas:Int = 0
 ) {
     private val historialAcciones = mutableMapOf<String, MutableList<String>>()
     private var estadoCarrera = false // Indica si la carrera está en curso o ha finalizado.
@@ -82,16 +84,33 @@ class Carrera(
 
             val vehiculoSeleccionado = seleccionaVehiculoQueAvanzara()
             avanzarVehiculo(vehiculoSeleccionado)
+            contRondas++
+            if (contRondas == 3){
+                contRondas = 0
+                rondas++
+                clasificacionParcial()
+            }
 
             val vehiculoGanador = determinarGanador()
             if (vehiculoGanador != null) {
                 estadoCarrera = false
                 println("\n¡Carrera finalizada!")
-                println("\n¡¡¡ENHORABUENA ${vehiculoGanador.nombre}!!!\n")
+                println("\n¡¡¡ENHORABUENA ${(vehiculoGanador.nombre).capitalizar()}!!!\n")
             }
 
         }
     }
+
+
+    private fun clasificacionParcial() {
+        println("***  CLASIFICACIÓN PARCIAL  (ronda $rondas)  ***")
+
+        val resultados = obtenerResultados().sortedBy { it.posicion }
+        for (i in resultados){
+            println(i.vehiculo.obtenerInformacion(i.posicion))
+        }
+    }
+
 
     /**
      * Selecciona aleatoriamente un vehículo participante para avanzar en la carrera. Este método se utiliza dentro

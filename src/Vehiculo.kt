@@ -62,8 +62,8 @@ open class Vehiculo(
      *
      * @return Una cadena de texto que representa la información del vehículo.
      */
-    fun obtenerInformacion(): String {
-        return calcularAutonomia().toString()
+    fun obtenerInformacion(posicion: Int): String {
+        return "$posicion. $nombre(km = $kilometrosActuales, combustible = $combustibleActual L)"
     }
 
     /**

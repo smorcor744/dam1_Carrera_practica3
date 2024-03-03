@@ -4,12 +4,10 @@ class Quad(nombre: String,
            capacidadCombustible: Float,
            combustibleActual: Float,
            kilometrosActuales: Float,
-           cilindrada: Int
+           cilindrada: Int,
+            val tipo:TiposQuad = TiposQuad.VEHICULOS_ESPECIALES
 ) :Motocicleta(nombre, marca, modelo, capacidadCombustible, combustibleActual, kilometrosActuales, cilindrada
 ) {
-    companion object{
-
-    }
     override fun calcularAutonomia(): Float {
         return super.calcularAutonomia() / 2
     }

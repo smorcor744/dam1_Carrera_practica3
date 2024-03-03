@@ -28,7 +28,7 @@ fun main() {
     val vehiculos = mutableListOf<Vehiculo>()
     while (numParticipantes <= 0) {
         print("Introduce el número de participantes: ")
-        numParticipantes = readln().toInt() ?: 0
+        numParticipantes = readln().toInt()
 
 
 
